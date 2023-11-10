@@ -1,0 +1,34 @@
+.global-nav ul
+{
+	display: table;
+	margin: 0 auto;
+	padding: 0 ;
+	width: 80%;
+	text-align: center;
+}
+
+.global-nav li
+{
+	display: table-cell;
+	min-width: 50px;
+}
+
+.global-nav a
+{
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	color: #555;
+	padding-bottom: 5px;
+}
+
+.global-nav li.current
+{
+	border-bottom: 3px solid #92D050;
+}
+
+.global-nav li:hover
+{
+	color: #E7DA66;
+	border-bottom: 3px solid #F0E475;
+}
