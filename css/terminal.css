@@ -1,0 +1,19 @@
+#terminal
+{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: black;
+	color: white;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+#command-line
+{
+	width: 100%;
+	border: none;
+	background: none;
+	color: inherit;
+	font-family: inherit;
+	resize: none;
+}
