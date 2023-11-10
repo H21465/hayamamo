@@ -12,40 +12,34 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			e.preventDefault();
 			const command = this.value.toLowerCase();
 			const commandOutput = document.createElement('div');
-			console.log(command);
 			commandOutput.textContent = `> ${command}`;
 			terminalHistory.appendChild(commandOutput);
 			history.push(command);
 			localStorage.setItem('terminalHistory', JSON.stringify(history));
-			if (command === 'cd home') {
+			if (command === 'look home') {
 				window.location.href = 'index.html';
-			} else if (command === 'cd about') {
-				window.location.href = 'about.html';
-			} else if (command === 'cd help') {
+			} else if (command === 'look skills') {
+				window.location.href = 'skills.html';
+			} else if (command === 'look help') {
 				window.location.href = 'help.html';
 			} else {
 				commandOutput.textContent = `Command not found: ${command}`;
+				history.push(commandOutput.textContent);
 			}
-			console.log("yes");
 			this.value = '';
 		}
 	});
 	commandLine.focus();
 });
 
-document.addEventListener('DOMContentLoaded', (event) =>
-{
+document.addEventListener('DOMContentLoaded', (event) => {
 	const navLinks = document.querySelectorAll('.global-nav a');
 	const currentUrl = window.location.pathname.split('/').pop();
 
-	navLinks.forEach(link =>
-	{
-		if (link.getAttribute('href') === currentUrl)
-		{
+	navLinks.forEach(link => {
+		if (link.getAttribute('href') === currentUrl) {
 			link.parentElement.classList.add('current');
-		}
-		else
-		{
+		}else {
 			link.parentElement.classList.remove('current');
 		}
 	});
