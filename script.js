@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			this.value = '';
 		}
 	});
+	commandLine.focus();
 });
 
 document.addEventListener('DOMContentLoaded', (event) =>
