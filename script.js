@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			e.preventDefault();
 			const command = this.value.toLowerCase();
 			const commandOutput = document.createElement('div');
+			console.log(command);
 			commandOutput.textContent = `> ${command}`;
 			terminalHistory.appendChild(commandOutput);
 			history.push(command);
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			} else {
 				commandOutput.textContent = `Command not found: ${command}`;
 			}
+			console.log("yes");
 			this.value = '';
 		}
 	});
