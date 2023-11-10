@@ -22,6 +22,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 				window.location.href = 'skills.html';
 			} else if (command === 'look help') {
 				window.location.href = 'help.html';
+			} else if (command === 'delete') {
+				while (terminalHistory.firstChild) {
+					terminalHistory.removeChild(terminalHistory.firstChild);
+				}
+				localStorage.clear();
+				history.length = 0;
 			} else {
 				commandOutput.textContent = `Command not found: ${command}`;
 				history.push(commandOutput.textContent);
