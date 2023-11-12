@@ -1,3 +1,11 @@
+@media screen and (max-width: 768px)
+{
+	#terminal
+	{
+		display: none;
+	}
+}
+
 #terminal
 {
 	position: fixed;
